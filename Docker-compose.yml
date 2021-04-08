@@ -1,0 +1,68 @@
+version: '3.4'
+
+services:
+  mysql:
+    image: mysql
+       
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: Ekt@toshi25
+      MYSQL_MYURL: jdbc:mysql://localhost:3306/authenticateUser?createDatabaseIfNotExist=true&user=root&password=${MYSQL_ROOT_PASSWORD}
+      
+
+  mongo:
+    image: mongo:latest
+    
+    ports:
+      - 27017:27017
+    environment:
+      MONGODB_URL1: mongodb://localhost:27017/feedback
+      MONGODB_URL2: mongodb://localhost:27017/favgif
+      
+
+      
+  UserAuthentication:
+    image: priyankamandke26/userauth_gipher
+    container_name: gipherusercontainer1
+    
+    
+    depends_on: 
+      - mysql
+    restart: always
+    ports:
+      - 9901:9901
+      
+      
+  favoriteservice:
+    image: ektadutt/favoriteservice
+    container_name: gipherfavcontainer1
+ 
+    
+    depends_on: 
+      - mongo
+    restart: always
+    ports:
+      - 9903:9903
+    
+  feedbackservice:
+    image: ektadutt/feedbackservice2
+    container_name: gipherfeedbackcontainer1
+ 
+    
+    depends_on: 
+      - mongo
+    restart: always
+    ports:
+      - 9910:9910
+      
+      
+      
+      
+  angular:
+    image: priyankamandke26/gipherapp_angular
+    restart: always
+    container_name: angular-frontend
+    ports:
+      - 8080:8080
+    

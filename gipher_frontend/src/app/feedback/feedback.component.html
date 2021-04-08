@@ -1,0 +1,83 @@
+<app-header></app-header>
+<div class="feedback-page">
+    <mat-card >
+      <mat-card-title style="text-align:center;">Feedback</mat-card-title>
+      <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">   
+            <mat-tab label="Feedback Form">
+            <mat-card-content>
+                <form action="" *ngIf="flag" id="myform">
+ 
+                       
+                        <mat-form-field>
+                            <input
+                            matInput
+                            placeholder="Enter Your Full Name"
+                            required
+                            name="name"
+                            [(ngModel)]="feedback.username"
+                            #name="ngModel">
+                            <mat-error *ngIf="name.invalid">Full Name is required</mat-error>
+                            <mat-icon matSuffix>perm_identity</mat-icon>
+                        
+                        </mat-form-field>
+                     
+                        <mat-form-field>
+                                <input
+                                matInput
+                                placeholder="Share your Experience with Us"
+                                required
+                                name="experience"   
+                                [(ngModel)]="feedback.feedback"
+                                #experience="ngModel">
+                                <mat-error *ngIf="experience.invalid">Your Experience is required</mat-error>
+                                <mat-icon matSuffix>description</mat-icon>
+                        </mat-form-field>
+                        <mat-form-field>
+                
+                            <input
+                                matInput
+                                placeholder="Suggestions"
+                                required
+                                name="suggestion"
+                                [(ngModel)]="feedback.suggestion"
+                                #suggestion="ngModel">
+                                <mat-error *ngIf="suggestion.invalid">Please enter Suggestions</mat-error>
+                                <mat-icon matSuffix>event_available</mat-icon>
+                            </mat-form-field>
+                            <mat-form-field>
+                    
+                                   
+                                    <fieldset class="rating">
+                                        <legend>Please rate:</legend>
+                                        <input type="radio" id="star5" name="rating"  [(ngModel)]="feedback.rating" value="5" /><label for="star5" title="Rocks!">  &nbsp; 5   </label>&nbsp;
+                                        <input type="radio" id="star4" name="rating" [(ngModel)]="feedback.rating" value="4" /><label for="star4" title="Pretty good">  &nbsp;4  </label>&nbsp;
+                                        <input type="radio" id="star3" name="rating" [(ngModel)]="feedback.rating" value="3" /><label for="star3" title="Meh"> &nbsp; 3  </label>&nbsp;
+                                        <input type="radio" id="star2" name="rating" [(ngModel)]="feedback.rating" value="2" /><label for="star2" title="Kinda bad"> &nbsp; 2  </label>&nbsp;
+                                        <input type="radio" id="star1" name="rating" [(ngModel)]="feedback.rating" value="1" /><label for="star1" title="Sucks big time"> &nbsp; 1 </label>&nbsp;
+                                       
+                                        <input
+                                        matInput
+                                        name="rating"
+                                        [(ngModel)]="feedback.rating"
+                                        required
+                                        #rating="ngModel">          
+                                        <mat-error *ngIf="rating.invalid">Rating is required</mat-error>          
+                                    </fieldset>
+                                   
+                            </mat-form-field>
+                      
+                <button
+                    mat-raised-button
+                    color="primary"
+                    class="signup-button" (click)="FeedbackHandler(feedback);" >
+                 
+                    Submit
+                </button>         
+                </form>
+            </mat-card-content>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+</div>
+<!-- <app-allfeedback></app-allfeedback> -->
+

@@ -1,0 +1,15 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URL2}
+#      authentication-database: dbAdmin
+#      username: root
+#      password: root
+#      database: userservicedb
+#      port: 27017
+#      host: localhost
+  application:
+    name: favgif-service
+server:
+  port: 9903
+

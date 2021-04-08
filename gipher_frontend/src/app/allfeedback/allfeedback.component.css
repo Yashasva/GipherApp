@@ -1,0 +1,40 @@
+  
+.column {
+    float: left;
+    width: 33.33%;
+   
+  }
+  
+.review{
+    background-image: url("/assets/bbb.jpg");
+}
+  .table{
+      margin-top: auto;
+
+  }
+ 
+  mat-card{
+ 
+    width: 350px;
+    height: 400px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;  
+ 
+}
+  
+tr{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align:center;
+  }
+ 
+ p{
+        font-family: 'Faustina', serif;
+        font-size: larger;
+    }
+    h1{
+        font-size:xx-large;
+        font-family :Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+    }
+   

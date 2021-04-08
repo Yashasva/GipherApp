@@ -1,0 +1,39 @@
+
+<mdb-navbar SideClass="navbar navbar-expand-lg py-3 navbar-dark bg-danger" class="navCss">
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#" style="font-size:xx-large;"><mat-icon style="font-size: 35px;">home</mat-icon>  GIPHER</a></mdb-navbar-brand>
+  <!-- Collapsible content -->
+  <links>
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <a class="nav-link waves-light" routerLink="/favorites" mdbWavesEffect>Favorites</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link waves-light" routerLink="/feedback" mdbWavesEffect >Feedback</a>
+          </li>
+       
+          <li class="nav-item">
+              <a class="nav-link waves-light" routerLink="/allfeedback" mdbWavesEffect>Reviews</a>
+          </li>
+          <li class="nav-item" *ngIf="login.isLogin() === false">
+              <a class="nav-link waves-light" routerLink="/login" mdbWavesEffect>Login</a>
+          </li>
+          <li class="nav-item" *ngIf="login.isLogin() === false">
+              <a class="nav-link waves-light" routerLink="/register" mdbWavesEffect>Register</a>
+          </li>
+          <li class="nav-item" *ngIf="login.isLogin() === true" style="cursor: pointer;">
+              <a class="nav-link waves-light" (click)="clickfunc()" mdbWavesEffect>Logout</a>
+          </li>
+          <li class="nav-item" *ngIf="login.isLogin() === true" style="cursor: pointer;">
+            <a class="nav-link waves-light" routerLink="/update"  mdbWavesEffect>Update Profile</a>
+        </li>
+        <p class="nav-item" *ngIf="login.isLogin() === true" style="cursor: pointer;">
+            <span><h1>UserId : {{user.userId}}</h1></span>    
+            </p>
+          
+      </ul>
+  </links>
+  
+</mdb-navbar>
+      
