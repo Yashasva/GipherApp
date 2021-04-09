@@ -19,5 +19,5 @@ services:
 variables:
  MONGODB_URL1: mongodb://localhost:27017/feedback
  MONGODB_URL2: mongodb://localhost:27017/favgif
- MYSQL_MYURL: mysql://localhost:3306/authenticateUser?createDatabaseIfNotExist=true&user=root&password=${MYSQL_ROOT_PASSWORD}
+ MYSQL_MYURL: jdbc:mysql://localhost:3306/authenticateUser?createDatabaseIfNotExist=true&user=root&password=${MYSQL_ROOT_PASSWORD}
  MYSQL_ROOT_PASSWORD: ilovetotravel@2021
