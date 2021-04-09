@@ -7,7 +7,7 @@ services:
     ports:
       - 3306:3306
     environment:
-      MYSQL_ROOT_PASSWORD: Ekt@toshi25
+      MYSQL_ROOT_PASSWORD: ilovetotravel@2021
       MYSQL_MYURL: jdbc:mysql://localhost:3306/authenticateUser?createDatabaseIfNotExist=true&user=root&password=${MYSQL_ROOT_PASSWORD}
       
 
