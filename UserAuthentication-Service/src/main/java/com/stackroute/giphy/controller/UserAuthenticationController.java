@@ -30,6 +30,7 @@ public class UserAuthenticationController {
 	@PostMapping( "/api/v1/auth/register")
 	public ResponseEntity<?> registerUser(@RequestBody User user) {
 		try {
+			System.out.println("This is working");
 			this.authicationService.saveUser(user);
 			HashMap<String,String> map = new HashMap<String, String>();
 			map.put("CREATED","User Added");
