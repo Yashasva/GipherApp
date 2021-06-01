@@ -5,8 +5,10 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="giphy_users")
 public class User {
 
 	@Id
