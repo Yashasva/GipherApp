@@ -121,6 +121,13 @@ public class UserAuthenticationController {
               
 	}
 	
+	@GetMapping("/api/test")
+	public ResponseEntity<?> getTest(){
+		HashMap<String,String> map = new HashMap<String, String>();
+		map.put("SUCCESS","GET");
+		return new ResponseEntity<HashMap>(map, HttpStatus.CREATED);
+	}
+	
 	// Generate JWT token
 	public String getToken(String username, String password) throws Exception {
 		String ibmkey = "SecretKeyToGenJWTs";
