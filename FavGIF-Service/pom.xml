@@ -109,6 +109,17 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+		        <groupId>com.heroku.sdk</groupId>
+		        <artifactId>heroku-maven-plugin</artifactId>
+		        <version>3.0.3</version>
+				<configuration>
+            	  <appName>murmuring-spire-15138</appName>
+				  <processTypes>
+     				<web>java $JAVA_OPTS -cp target/classes:target/dependency/* com.stackroute.giphy.FavGifServiceApplication</web>
+  				  </processTypes>
+			    </configuration>
+		      </plugin>
 		</plugins>
 	</build>
 
