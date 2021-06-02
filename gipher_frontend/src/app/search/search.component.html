@@ -1,5 +1,5 @@
-<div class="search">
-<input type="search" placeholder="Search for GIFs" style="text-align: center;" #gif (keyup.enter)="search(gif.value)" >
-
+<div class="search position-sticky">
+  <input type="search" placeholder="Search for GIFs" style="text-align: center;" #gif (keyup.enter)="search(gif.value)" >
+  <button class="btn btn-dark" (click)="search(gif.value)"><mat-icon>search</mat-icon></button>
 </div>
 

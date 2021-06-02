@@ -10,7 +10,7 @@ mat-card img{
   /* margin: 10px; */
 }
 .home{
-  background-image: url("/assets/bbb.jpg");
+  background-image: url("/assets/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
 }
 .center {
   text-align: center;
@@ -19,9 +19,7 @@ mat-card img{
 .center pagination-controls  {
   border: 1px solid #ddd; /* Gray */
 }
-.icon{
-  
-}
+
 .icon.active{
 color: rgb(226, 72, 95);
 }

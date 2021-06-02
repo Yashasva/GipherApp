@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
@@ -35,6 +35,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { UpdateUserProfileComponent } from './update-user-profile/update-user-profile.component';
 import{ MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MdbModule } from 'mdb-angular-ui-kit';
 
 const appRoutes: Routes = [
   { path: 'login',
@@ -113,7 +114,9 @@ const appRoutes: Routes = [
     NgxPaginationModule,
     MatSidenavModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MdbModule,
+    NoopAnimationsModule
 
   ],
   providers: [RouterService,GifService,GifguardGuard,LoginService ],

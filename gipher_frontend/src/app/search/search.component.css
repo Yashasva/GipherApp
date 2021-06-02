@@ -1,19 +1,18 @@
-.search{
+/* .search{
     max-width: 100%;
-    /* margin:2px; */
     text-align: center;
     font-size: 18px;
     background-color:#df4759;
 
-}
+} */
 
 .search input{
-    width: 75.5%;
+    width: 96%;
     padding: 10px 3px;  
-    /* text-align: center; */
-    /* background-color: rgb(78, 100, 196); ; */
     border: 2px solid lightslategray;
     background-color:#fdfeff;
     
 }
+
+
 
