@@ -20,9 +20,9 @@ routeToFav(){
   this.router.navigate(['/favorites']);
   
 }
-routeToAllFav(){
-  this.router.navigate(['/allfeedback']);
-}
+// routeToAllFav(){
+//   this.router.navigate(['/allfeedback']);
+// }
 
 
 }

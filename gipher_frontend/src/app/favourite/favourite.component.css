@@ -1,13 +1,14 @@
 mat-card img{
-  /* object-fit: cover; this makes the image in src fit to the size specified below */
-  width: 200px; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+  width: 200px; 
   height: 200px;
   margin-top: 10px;
 }
 .card{
+  position:relative;
   background-color: linen;
   margin-bottom: 10px;
+  max-width: 250px;
 }
-.container{
+/* .container{
   background-image: url("/assets/bbb.jpg");
-}
+} */

@@ -28,7 +28,7 @@ export class RegisterComponent implements OnInit {
 console.log(this.user);
     // this.http.get<any>('http://api.giphy.com/v1/randomid?api_key=8l67fX89RqQpLGMZU74UsgJtUdn8LnXo')
     // .subscribe(response=>this.user.userId = response.data.random_id);
-    this.http.post<any>('http://localhost:9901/api/v1/auth/register',this.user)
+    this.http.post<any>('https://stormy-sands-73847.herokuapp.com/api/v1/auth/register',this.user)
     .subscribe(response=>{console.log(response);
       sessionStorage.setItem("userId",this.user.userId);
       sessionStorage.setItem("userName",this.user.userName);

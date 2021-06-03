@@ -1,37 +1,52 @@
 
 
-<mdb-navbar SideClass="navbar navbar-expand-lg py-3 navbar-dark bg-dark" class="navCss">
-  <mdb-navbar-brand><a class="navbar-brand" href="#" style="font-size:xx-large;"><mat-icon style="font-size: 35px;">home</mat-icon></a></mdb-navbar-brand>
+<mdb-navbar SideClass="navbar navbar-expand-lg py-3 navbar-dark bg-dark" class="navCss" [containerInside]="false">
+  <mdb-navbar-brand>
+    <a href="#" class="navbar-brand"><mat-icon  style="font-size: xx-large; ">home</mat-icon></a>  
+    <!-- <a class="navbar-brand" href="#" style="font-size:x-large;">Gipher</a> -->
+  </mdb-navbar-brand>
   <links>
       <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link waves-light" href="#" mdbWavesEffect>Gipher</a>
+        </li>
           <li class="nav-item">
               <a class="nav-link waves-light" routerLink="/favorites" mdbWavesEffect>Favorites</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
               <a class="nav-link waves-light" routerLink="/feedback" mdbWavesEffect >Feedback</a>
-          </li>
+          </li> -->
        
-          <li class="nav-item">
+          <!-- <li class="nav-item">
               <a class="nav-link waves-light" routerLink="/allfeedback" mdbWavesEffect>Reviews</a>
-          </li>
+          </li> -->
           <li class="nav-item" *ngIf="login.isLogin() === false">
               <a class="nav-link waves-light" routerLink="/login" mdbWavesEffect>Login</a>
           </li>
           <li class="nav-item" *ngIf="login.isLogin() === false">
               <a class="nav-link waves-light" routerLink="/register" mdbWavesEffect>Register</a>
           </li>
-          <li class="nav-item" *ngIf="login.isLogin() === true" style="cursor: pointer;">
+          <!-- <li class="nav-item" *ngIf="login.isLogin() === true" style="cursor: pointer;">
               <a class="nav-link waves-light" (click)="clickfunc()" mdbWavesEffect>Logout</a>
           </li>
           <li class="nav-item" *ngIf="login.isLogin() === true" style="cursor: pointer;">
-            <a class="nav-link waves-light" routerLink="/update"  mdbWavesEffect>Update Profile</a>
-        </li>
-        <p class="nav-item" *ngIf="login.isLogin() === true" style="cursor: pointer;">
-            <span><h1>UserId : {{user.userId}}</h1></span>    
-            </p>
+            <a class="nav-link waves-light" routerLink="/update"  mdbWavesEffect></a>
+        </li> -->
+        <li class="nav-item dropdown" dropdown *ngIf="login.isLogin() === true">
+            <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>{{user.userId}}<span class="caret"></span></a>
+            <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+              <a class="dropdown-item waves-light" mdbWavesEffect routerLink="/update" >Update Profile</a>
+              <a class="dropdown-item waves-light" mdbWavesEffect (click)="clickfunc()">Log out</a>
+            </div>
+          </li>
+        <!-- <p class="nav-item" *ngIf="login.isLogin() === true" style="cursor: pointer;">
+            <span><h1>UserId : </h1></span>    
+            </p> -->
           
       </ul>
+      <app-search></app-search>
   </links>
+  
   
 </mdb-navbar>
       

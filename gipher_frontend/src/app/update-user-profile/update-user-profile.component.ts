@@ -4,6 +4,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { LoginService } from '../services/login.service';
 import { RouterService } from '../services/router.service';
 import { User } from '../user';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-update-user-profile',

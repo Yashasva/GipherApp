@@ -72,7 +72,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.gif.title=gif1.title;
   if(sessionStorage.getItem('isAuthorized')==='true')
   {
-    this.http.post<any>(`http://localhost:9903/api/v1/add/${sessionStorage.getItem('userId')}`,
+    this.http.post<any>(`https://murmuring-spire-15138.herokuapp.com/api/v1/add/${sessionStorage.getItem('userId')}`,
     this.gif,
     {
       headers: new HttpHeaders().set('Authorization', `Bearer ${sessionStorage.getItem('token')}`)

@@ -22,7 +22,7 @@ export class FavouriteComponent implements OnInit {
   this.submitMessage='';
   }
   ngOnInit(): void {
-    this.http.get<any>(`http://localhost:9903/api/v1/${sessionStorage.getItem('userId')}`,
+    this.http.get<any>(`https://murmuring-spire-15138.herokuapp.com/api/v1/${sessionStorage.getItem('userId')}`,
     {
       headers: new HttpHeaders().set('Authorization', `Bearer ${sessionStorage.getItem('token')}`)
     })
@@ -35,7 +35,7 @@ export class FavouriteComponent implements OnInit {
     // console.log(sessionStorage.getItem('token'));
     this.gif.gifId=gif.gifId;
      const username= sessionStorage.getItem('userId');
-    this.http.delete<any>(`http://localhost:9903/api/v1/${username}/${this.gif.gifId}`
+    this.http.delete<any>(`https://murmuring-spire-15138.herokuapp.com/api/v1/${username}/${this.gif.gifId}`
       ,
       {
         headers: new HttpHeaders().set('Authorization', `Bearer ${sessionStorage.getItem('token')}`)

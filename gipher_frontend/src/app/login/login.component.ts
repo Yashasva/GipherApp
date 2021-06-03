@@ -29,9 +29,9 @@ export class LoginComponent implements OnInit {
 
   clickHandler(){
     console.log(this.user);
-    this.http.post<any>('http://localhost:9901/api/v1/auth/login', this.user)
+    this.http.post<any>('https://stormy-sands-73847.herokuapp.com/api/v1/auth/login', this.user)
     .subscribe(response=>{ 
-      // console.log(response.token);
+    console.log(response.token);
     sessionStorage.setItem('token',response.token);
     sessionStorage.setItem('isAuthorized','true');
     console.log(response);

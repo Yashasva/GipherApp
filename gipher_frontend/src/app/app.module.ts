@@ -26,7 +26,7 @@ import { GifService } from './services/gif.service';
 import { GifguardGuard } from './gifguard.guard';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { AllfeedbackComponent } from './allfeedback/allfeedback.component';
-import { FeedbackComponent } from './feedback/feedback.component';
+
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FooterComponent } from './footer/footer.component';
 import { LoginService } from './services/login.service';
@@ -62,17 +62,13 @@ const appRoutes: Routes = [
     path: 'favorites',
     component: FavouriteComponent,
     canActivate: [GifguardGuard]
-  },
-  {
-     path: 'feedback',
-     component: FeedbackComponent,
-     canActivate: [GifguardGuard]
-  },
-  {
-    path: 'allfeedback',
-    component: AllfeedbackComponent,
-    canActivate: [GifguardGuard]
-  },
+  }
+  
+  // {
+  //   path: 'allfeedback',
+  //   component: AllfeedbackComponent,
+  //   canActivate: [GifguardGuard]
+  // },
 
 ];
   
@@ -85,7 +81,6 @@ const appRoutes: Routes = [
     HeaderComponent,
     SearchComponent,
     FavouriteComponent,
-    FeedbackComponent,
     FavouriteComponent,
     AllfeedbackComponent,
     FooterComponent,
